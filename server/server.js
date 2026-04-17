@@ -10,6 +10,7 @@ const axios = require("axios");
 const nasaKey = "A2duc4qlrKHp7ptCSu8KYAG6148GE7jgzNvM7Xcj"
 
 app.use(cors(corsOptions));
+console.log("this is a test");
 
 // Backend API route
 app.get("/api/people", async (req, res) => {
