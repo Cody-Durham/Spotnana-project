@@ -4,7 +4,6 @@ const cors = require("cors");
 const corsOptions = {
     origin: ["http://localhost:5173"]
 };
-console.log("testing");
 
 const axios = require("axios");
 const nasaKey = "A2duc4qlrKHp7ptCSu8KYAG6148GE7jgzNvM7Xcj"
