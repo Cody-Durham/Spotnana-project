@@ -2,24 +2,22 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [picOfDay, setPicOfDay] = useState(null);
-  console.log("picccc of the daaayyyyy", picOfDay);
   
   
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const res = await fetch("http://localhost:8080/api/pic");
+      const data = await res.json();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("http://localhost:8080/api/people");
-        const data = await res.json();
+      setPicOfDay(data.url);
+    } catch (err) {
+      console.log("error", err);
+    }
+  };
 
-        setPicOfDay(data.url);
-      } catch (err) {
-        console.log("error", err);
-      }
-    };
-
-    fetchData();
-  }, []);
+  fetchData();
+}, []);
 
   return (
     <div>
@@ -27,7 +25,6 @@ function App() {
       <div>
         <img src={picOfDay} alt="" />
       </div>
-      
     </div>
   );
 }

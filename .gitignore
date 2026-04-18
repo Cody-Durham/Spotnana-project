@@ -1,0 +1,6 @@
+*.ai
+*.env
+*.svg
+node-modules
+dist/
+build/
