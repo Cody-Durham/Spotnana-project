@@ -1,6 +1,7 @@
 *.ai
 *.env
 *.svg
-node-modules
+*.pdf
+node_modules/
 dist/
 build/
