@@ -1,0 +1,61 @@
+.main-header-container {
+    background: linear-gradient(
+        180deg,
+        rgba(45, 42, 90, 1) 0%,
+        rgba(45, 42, 90, 0.8) 40%,
+        rgba(36, 32, 56, 0) 100%
+    );
+
+    .upper-container {
+        color: white;
+        height: 200px;
+        display: flex;
+
+        .left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            .planet-logo {
+                transform: scale(80%);
+            }
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 5rem;
+            font-weight: 600;
+        }
+        .tagline {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-left: 20px;
+            padding-top: 40px;
+        }
+    }
+    .lower-container {
+        border-top: 1px solid rgb(184, 179, 217);;
+        display: flex;
+        height: 200px;
+        color: white;
+        padding: 20px;
+        
+        .link-style {
+            color: rgb(184, 179, 217);
+            margin-right: 10px;
+            font-weight: 300;
+            font-size: 1.2rem;
+            height: 25px;
+            cursor: pointer;
+            
+            &:hover {
+                color: rgb(228, 228, 228);
+                transition: 0.5s ease;
+                transform: scale(1.05);
+            }
+        }
+    }
+}
