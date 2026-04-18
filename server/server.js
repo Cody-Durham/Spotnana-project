@@ -53,12 +53,9 @@ app.get("/api/pic", async (req, res) => {
     // check for nasa key
     if (!nasaKey) {
       // ******************* I should put up a dialog here *****************
-      return res.status(500).json({
-        error: "NASA API key is missing"
-      });
+      return res.status(500).json({ error: "NASA API key is missing" });
     }
     console.log("res!!!!!!!!!!!", res);
-    
 
     const response = await axios.get("https://api.nasa.gov/planetary/apod", {
         params: {
