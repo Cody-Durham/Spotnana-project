@@ -23,7 +23,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className="background-container">
+    <div>
       {/* <h1>Testing</h1> */}
       {/* <div>
         <img src={picOfDay} alt="" />
