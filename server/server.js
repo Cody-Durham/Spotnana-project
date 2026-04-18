@@ -28,6 +28,8 @@ app.get("/api/pic", async (req, res) => {
       return res.status(500).json({ error: "NASA API key is missing" });
     }
     console.log("res!!!!!!!!!!!", res);
+    console.log("testing");
+    
 
     const response = await axios.get("https://api.nasa.gov/planetary/apod", {
         params: {
