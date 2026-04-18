@@ -14,9 +14,6 @@ const Header = () => {
                 <div 
                     className="link-style"
                     name="home"
-                    onClick={() => {
-                        console.log("name", name) // neeed to fix
-                    }}
                     role="button" 
                     tabIndex="0"
                     >
@@ -26,9 +23,6 @@ const Header = () => {
                 <div 
                     className="link-style" 
                     name="our-planets"
-                    onClick={() => {
-                        console.log("name", name) // neeed to fix
-                    }}
                     role="button" 
                     tabIndex="0"
                 >
@@ -38,9 +32,6 @@ const Header = () => {
                 <div 
                     className="link-style" 
                     name="nasa"
-                    onClick={() => {
-                        console.log("name", name) // neeed to fix
-                    }}
                     role="button" 
                     tabIndex="0"
                     >

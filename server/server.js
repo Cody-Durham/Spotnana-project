@@ -41,7 +41,7 @@ app.get("/api/pic", async (req, res) => {
 
     // if the upstream server sends a invalid response
     if (!response.data || !response.data.url) {
-      // ******************* I should put up a dialog here *****************
+      // ******************* I shoul`d put up a dialog here *****************
       return res.status(502).json({
         error: "Invalid response from NASA API"
       });
