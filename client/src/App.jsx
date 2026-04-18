@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import "./styles/Global.scss";
+
+import Header from "./components/Header";
 
 function App() {
   const [picOfDay, setPicOfDay] = useState(null);
@@ -20,11 +23,12 @@ useEffect(() => {
 }, []);
 
   return (
-    <div>
-      <h1>Testing</h1>
-      <div>
+    <div className="background-container">
+      {/* <h1>Testing</h1> */}
+      {/* <div>
         <img src={picOfDay} alt="" />
-      </div>
+      </div> */}
+      <Header />
     </div>
   );
 }
