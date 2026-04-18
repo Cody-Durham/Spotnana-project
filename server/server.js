@@ -10,11 +10,8 @@ const corsOptions = {
 };
 
 const nasaKey = process.env.NASA_API_KEY;
-console.log("nasaKey!!!!!!!!!!!!!!!", nasaKey);
-
 
 app.use(cors(corsOptions));
-
 
 // Backend API route for Nasa picture of the day
 app.get("/api/pic", async (req, res) => {
@@ -45,5 +42,5 @@ app.get("/api/pic", async (req, res) => {
 });
 
 app.listen(8080, () => {
-  console.log("Server running on 8080");
+  `console.`log("Server running on 8080");
 });
