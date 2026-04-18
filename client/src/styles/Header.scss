@@ -1,6 +1,4 @@
 .main-header-container {
-    // border: 1px solid red;
-    // height: 550px;
     background: linear-gradient(
         180deg,
         rgba(45, 42, 90, 1) 0%,
@@ -9,14 +7,11 @@
     );
 
     .upper-container {
-        // border: 2px solid red;
-        // background: purple;
         color: white;
         height: 200px;
         display: flex;
 
         .left {
-            // border: 1px solid aqua;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -26,7 +21,6 @@
             }
         }
         .right {
-            // border: 1px solid aqua;
             display: flex;
             align-items: center;
             color: white;
@@ -34,7 +28,6 @@
             font-weight: 600;
         }
         .tagline {
-            // border: 1px solid aqua;
             display: flex;
             align-items: center;
             font-size: 1.5rem;
@@ -43,7 +36,26 @@
             padding-top: 40px;
         }
     }
-    // .lower-container {
-
-    // }
+    .lower-container {
+        border-top: 1px solid rgb(184, 179, 217);;
+        display: flex;
+        height: 200px;
+        color: white;
+        padding: 20px;
+        
+        .link-style {
+            color: rgb(184, 179, 217);
+            margin-right: 10px;
+            font-weight: 300;
+            font-size: 1.2rem;
+            height: 25px;
+            cursor: pointer;
+            
+            &:hover {
+                color: rgb(228, 228, 228);
+                transition: 0.5s ease;
+                transform: scale(1.05);
+            }
+        }
+    }
 }

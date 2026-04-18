@@ -12,7 +12,6 @@ const corsOptions = {
 const nasaKey = process.env.NASA_API_KEY;
 
 app.use(cors(corsOptions));
-console.log("this is a test");
 
 const getYesterdayDate = () => {
   const date = new Date();
@@ -28,15 +27,13 @@ app.get("/api/pic", async (req, res) => {
       // ******************* I should put up a dialog here *****************
       return res.status(500).json({ error: "NASA API key is missing" });
     }
-    console.log("res!!!!!!!!!!!", res);
-    console.log("testing");
     
 
     const response = await axios.get("https://api.nasa.gov/planetary/apod", {
         params: {
           api_key: nasaKey,
           // date: getYesterdayDate()
-          date: "2026-04-13" // change this.. no hard code
+          // date: "2026-04-13" // change this.. no hard code
         },
         timeout: 5000
       }
