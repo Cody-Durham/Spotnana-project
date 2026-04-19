@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./styles/Global.scss";
 
+import saturn_pic from "../../Artwork/Assets/PIA21345.jpg";
 import Header from "./components/Header";
 
 function App() {
@@ -25,6 +26,13 @@ function App() {
   return (
     <div>
       <Header />
+      <div className="pic-container">
+        <img 
+        className="testing"
+        src={saturn_pic} 
+        alt="Picture of saturn in space"
+        />
+      </div>
     </div>
   );
 }

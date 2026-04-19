@@ -2,8 +2,7 @@
     background: linear-gradient(
         180deg,
         rgba(45, 42, 90, 1) 0%,
-        rgba(45, 42, 90, 0.8) 40%,
-        rgba(36, 32, 56, 0) 100%
+        rgb(4, 4, 4) 100%
     );
 
     .upper-container {
@@ -39,7 +38,6 @@
     .lower-container {
         border-top: 1px solid rgb(184, 179, 217);;
         display: flex;
-        height: 200px;
         color: white;
         padding: 20px;
         
