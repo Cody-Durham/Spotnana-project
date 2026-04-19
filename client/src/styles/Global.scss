@@ -1,6 +1,5 @@
 body {
   font-family: 'Inter', sans-serif !important;
-  // background: rgb(23, 23, 23);
   background: rgb(4, 4, 4);
 }
 
@@ -8,12 +7,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  // position: relative;
-  // top: -80px;
+
   height:600px;
   background: rgb(4, 4, 4);
   z-index: -1;
-  // background: blue;
 
   .testing {
     width: 100%;
