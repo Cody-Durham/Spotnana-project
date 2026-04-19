@@ -3,6 +3,7 @@ import "./styles/Global.scss";
 
 import saturn_pic from "../../Artwork/Assets/PIA21345.jpg";
 import Header from "./components/Header";
+import AiChat from "./components/AiChat";
 
 function App() {
   // const [picOfDay, setPicOfDay] = useState(null);
@@ -33,6 +34,7 @@ function App() {
         alt="Picture of saturn in space"
         />
       </div>
+        <AiChat />
     </div>
   );
 }

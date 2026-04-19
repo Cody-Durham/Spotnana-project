@@ -1,0 +1,65 @@
+.chat-main-container {
+    // border: 1px solid red;
+    width: 70%;
+    margin: 0 auto;
+    height: 500px;
+
+    .prompt-container {
+        // border: 1px solid aqua;
+        display: flex;
+        height: 100px;
+        height: 120px;
+
+        .prompt-bot-icon {
+            height: 110px;
+        }
+        .prompt-text-area {
+            // border: 1px solid aqua;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 20px;
+
+            label {
+                padding: 25px 0 0 10px;
+                font-family: 'Inter', sans-serif;
+                -webkit-font-smoothing: antialiased;
+                color: rgb(184, 179, 217);
+                margin-bottom: 10px;
+                font-size: 1.2rem;
+            }
+
+            .prompt {
+                // margin-top: 20px;
+                background: rgba(45, 42, 90, 1);
+                font-family: 'Inter', sans-serif;
+               -webkit-font-smoothing: antialiased;
+                height: 40px;
+                border-radius: 10px;
+                border: none;
+                color: rgb(184, 179, 217);
+                font-size: 1.2rem;
+                font-weight: 300;
+                padding: 5px 30px;
+            }
+            .prompt::placeholder {
+                color: rgb(184, 179, 217);
+            }
+        }
+    }
+
+    .ai-response-container {
+        // border: 2px solid red;
+        background: rgba(45, 42, 90, 1);
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 1.2rem;
+        color: rgb(184, 179, 217);
+        border-radius: 10px;
+        min-height: 250px;
+        margin-top: 30px;
+        padding: 20px 30px;
+        font-weight: 300;
+        margin-right: 20px;
+    }
+}
