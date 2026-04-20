@@ -28,7 +28,10 @@ function App() {
    * @name handleSubmit
    * Fetch input data from OpenAi
    */
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    console.log("Submit Fired")
+    e.preventDefault();
+
     try {
       const res = await fetch("http://localhost:8080/api/chat", {
         method: "POST",

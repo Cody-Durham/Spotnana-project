@@ -14,13 +14,19 @@ const AiChat = ({
     handleSubmit,
     promptValue
 }) => {
+
+    console.log("buttonType", buttonType);
+    
     return (
-        <div className="chat-main-container">
+        <form 
+            className="chat-main-container"
+            onSubmit={handleSubmit}
+        >
             <div className="prompt-container">
                 <img 
+                    alt="small robot helper"
                     className="prompt-bot-icon"
                     src={robot_icon}
-                    alt="small robot helper"
                 />
                 <div className="prompt-text-area">
                     <label htmlFor="">What would you like to learn about our solar system?</label>
@@ -33,28 +39,29 @@ const AiChat = ({
                         value={promptValue}
                     />
                 </div>
-                {buttonType === "Submit" ? (
-                    <button 
+                {!chatResponse && (
+                    <button
                         className={disableStyle}
-                        onClick={handleSubmit}
+                        type="submit"
                         disabled={disableButton}
                     >
                         Submit
                     </button>
-                ) : (
-                    <button 
+                )}
+                {chatResponse && (
+                    <button
+                        type="button"
                         className={disableStyle}
                         onClick={handleClear}
                     >
                         Clear
                     </button>
-                )
-                }
+                )}
             </div>
             <div className="ai-response-container">
                 {chatResponse?.length > 0 ? chatResponse : ""}
             </div>
-        </div>
+        </form>
     )
 }
 
