@@ -24,7 +24,7 @@ const AiChat = ({chatResponse, handleSubmit, handleChange}) => {
                     />
                 </div>
                 <button className="submit-button" onClick={handleSubmit}>
-                    Sumbmit
+                    Submit
                 </button>
             </div>
             <div className="ai-response-container">
