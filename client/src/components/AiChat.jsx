@@ -1,9 +1,10 @@
 import React from "react";
+
 import robot_icon from "../../../Artwork/Assets/robot_icon.png";
 
 import "../styles/AiChat.scss";
 
-const AiChat = ({handleSubmit, handleChange}) => {
+const AiChat = ({chatResponse, handleSubmit, handleChange}) => {
     return (
         <div className="chat-main-container">
             <div className="prompt-container">
@@ -22,30 +23,15 @@ const AiChat = ({handleSubmit, handleChange}) => {
                         onChange={handleChange}
                     />
                 </div>
+                <button className="submit-button" onClick={handleSubmit}>
+                    Sumbmit
+                </button>
             </div>
-            <button 
-                onClick={handleSubmit}
-            >
-                testing
-            </button>
             <div className="ai-response-container">
+                {chatResponse?.length > 0 ? chatResponse : ""}
             </div>
         </div>
     )
 }
 
 export default AiChat;
-
-
-// const handleOnChange = (e) => {
-//         const { checked, name, value } = e.target;
-//         let newVal = value;
-//         if (name === "ageAffirmation") {
-//             newVal = checked ? "1" : "0";
-//         }
-//         formDispatch({
-//             type: "text",
-//             field: name,
-//             payload: newVal
-//         });
-//     };

@@ -39,7 +39,6 @@ const Header = () => {
                 </div>
                 <div style={{marginRight: "15px", color: "rgb(128, 124, 151)"}}>&nbsp;|</div>
             </div>
-            
         </div>
     );
 }
