@@ -11,7 +11,6 @@ function App() {
   const [chatResponse, setChatResponse] = useState(null);
   const [disableButton, setDisableButton] = useState(true);
   const [promptValue, setPromptValue] = useState("");
-  const [buttonType, setButtonType] = useState("Submit");
   
   const disableStyle = promptValue !== "" ? "submit-button-style" : "submit-button-disable-style";
 
@@ -29,7 +28,6 @@ function App() {
    * Fetch input data from OpenAi
    */
   const handleSubmit = async (e) => {
-    console.log("Submit Fired")
     e.preventDefault();
 
     try {
@@ -54,7 +52,6 @@ function App() {
    * Reset fields (clear fields)
    */
   const handleClear = () => {
-    setButtonType("Submit");
     setChatResponse(null);
     setPromptValue("");  
   };
@@ -83,9 +80,6 @@ function App() {
 useEffect(() => {
   if (promptValue !== "") {
     setDisableButton(false);
-    if (chatResponse) {
-      setButtonType("Clear");
-    }
   } else {
     setDisableButton(true);
   }
@@ -102,7 +96,6 @@ useEffect(() => {
         />
       </div>
         <AiChat 
-          buttonType={buttonType}
           chatResponse={chatResponse}
           disableButton={disableButton}
           disableStyle={disableStyle}

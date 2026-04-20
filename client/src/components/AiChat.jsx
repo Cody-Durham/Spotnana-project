@@ -5,7 +5,6 @@ import robot_icon from "../../../Artwork/Assets/robot_icon.png";
 import "../styles/AiChat.scss";
 
 const AiChat = ({
-    buttonType,
     chatResponse, 
     disableButton, 
     disableStyle,
@@ -14,9 +13,6 @@ const AiChat = ({
     handleSubmit,
     promptValue
 }) => {
-
-    console.log("buttonType", buttonType);
-    
     return (
         <form 
             className="chat-main-container"
