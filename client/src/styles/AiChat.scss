@@ -51,12 +51,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid rgb(184, 179, 217);
-        background: none;
+        background: rgba(45, 42, 90, 1);
         color: rgb(184, 179, 217);
         font-family: 'Inter', sans-serif;
         -webkit-font-smoothing: antialiased;
-        height: 48px;
+        height: 50px;
+        width: 150px;
         border-radius: 10px;
         font-size: 1.2rem;
         font-weight: 700;
@@ -64,12 +64,34 @@
         margin-top: 59px;
         cursor: pointer;
         transition: 0.2s ease;
-        width: 150px;
+        border: none;
         &:hover {
-            border: 1px solid rgb(184, 179, 217);
-            background: rgb(55, 51, 113);
+            background: rgb(63, 58, 131);
             transition: 0.2s ease;
         }
+    }
+
+    .submit-button-disable-style {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(184, 179, 217);
+        background: rgb(83, 83, 83);
+        color: black;
+        color: rgb(255, 255, 255);
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        height: 48px;
+        border-radius: 10px;
+        border: none;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding: 5px 35px;
+        margin-top: 59px;
+        cursor: not-allowed;
+        transition: 0.2s ease;
+        width: 150px;
+        opacity: .4;
     }
 
     .ai-response-container {

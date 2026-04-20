@@ -9,14 +9,19 @@ import "./styles/Global.scss";
 
 function App() {
   const [chatResponse, setChatData] = useState(null);
+  const [disableButton, setDisableButton] = useState(true);
   const [promptValue, setPrompt] = useState("");
   
+  const disableStyle = promptValue !== "" ? "submit-button" : "submit-button-disable-style";
+
   const handleChange = (e) => {
-    const {value, name} = e.target;
+    const {value} = e.target;
     setPrompt(value);
   };
 
   const handleSubmit = async () => {
+    console.log("hitting?");
+    
     try {
       const res = await fetch("http://localhost:8080/api/chat", {
         method: "POST",
@@ -51,6 +56,17 @@ function App() {
 //     fetchData();
 // }, []);
 
+/**
+ * Disable button
+ */
+useEffect(() => {
+  if (promptValue !== "") {
+    setDisableButton(false);
+  } else {
+    setDisableButton(true);
+  }
+}, [disableButton, promptValue])
+
   return (
     <div>
       <Header />
@@ -63,8 +79,10 @@ function App() {
       </div>
         <AiChat 
           chatResponse={chatResponse}
+          disableButton={disableButton}
+          handleChange={handleChange}
           handleSubmit={handleSubmit} 
-          handleChange={handleChange} 
+          disableStyle={disableStyle}
         />
     </div>
   );

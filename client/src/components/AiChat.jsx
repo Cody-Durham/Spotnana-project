@@ -4,7 +4,7 @@ import robot_icon from "../../../Artwork/Assets/robot_icon.png";
 
 import "../styles/AiChat.scss";
 
-const AiChat = ({chatResponse, handleSubmit, handleChange}) => {
+const AiChat = ({chatResponse, disableButton, handleChange, handleSubmit, disableStyle}) => {
     return (
         <div className="chat-main-container">
             <div className="prompt-container">
@@ -23,7 +23,12 @@ const AiChat = ({chatResponse, handleSubmit, handleChange}) => {
                         onChange={handleChange}
                     />
                 </div>
-                <button className="submit-button" onClick={handleSubmit}>
+                <button 
+                    className={disableStyle}
+                    onClick={handleSubmit}
+
+                    disabled={disableButton}
+                >
                     Submit
                 </button>
             </div>
