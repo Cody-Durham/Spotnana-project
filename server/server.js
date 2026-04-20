@@ -72,8 +72,7 @@ app.post("/api/chat", async (req, res) => {
       // I should add a dialog or alert here? 
       return res.status(400).json({ error: "Missing input" });
     }
-    console.log("input", input);
-    
+
     const response = await openai.responses.create({
       model: "gpt-4o-mini",
       input
@@ -97,8 +96,7 @@ app.post("/api/chat", async (req, res) => {
 app.get("/api/models", async (req, res) => {
   try {
     const models = await openai.models.list();
-    console.log(models);
-
+    
     res.json(models);
   } catch (err) {
     console.error(err);
