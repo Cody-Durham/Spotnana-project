@@ -4,7 +4,16 @@ import robot_icon from "../../../Artwork/Assets/robot_icon.png";
 
 import "../styles/AiChat.scss";
 
-const AiChat = ({chatResponse, disableButton, handleChange, handleSubmit, disableStyle}) => {
+const AiChat = ({
+    buttonType,
+    chatResponse, 
+    disableButton, 
+    disableStyle,
+    handleChange,
+    handleClear,
+    handleSubmit,
+    promptValue
+}) => {
     return (
         <div className="chat-main-container">
             <div className="prompt-container">
@@ -16,21 +25,31 @@ const AiChat = ({chatResponse, disableButton, handleChange, handleSubmit, disabl
                 <div className="prompt-text-area">
                     <label htmlFor="">What would you like to learn about our solar system?</label>
                     <input 
-                        type="text"
-                        name="submit-button"
                         className="prompt"
-                        placeholder="Type your question here!"
+                        name="submit-button"
                         onChange={handleChange}
+                        placeholder="Type your question here!"
+                        type="text"
+                        value={promptValue}
                     />
                 </div>
-                <button 
-                    className={disableStyle}
-                    onClick={handleSubmit}
-
-                    disabled={disableButton}
-                >
-                    Submit
-                </button>
+                {buttonType === "Submit" ? (
+                    <button 
+                        className={disableStyle}
+                        onClick={handleSubmit}
+                        disabled={disableButton}
+                    >
+                        Submit
+                    </button>
+                ) : (
+                    <button 
+                        className={disableStyle}
+                        onClick={handleClear}
+                    >
+                        Clear
+                    </button>
+                )
+                }
             </div>
             <div className="ai-response-container">
                 {chatResponse?.length > 0 ? chatResponse : ""}
