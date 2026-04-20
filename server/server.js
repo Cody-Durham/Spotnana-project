@@ -75,7 +75,8 @@ app.post("/api/chat", async (req, res) => {
 
     const response = await openai.responses.create({
       model: "gpt-4o-mini",
-      input
+      input, 
+      max_output_tokens: 200
     });
     
     return res.json({ output: response.output_text });
