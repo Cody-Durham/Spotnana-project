@@ -11,10 +11,10 @@ This project is a web-based application called Curious, designed to support lear
 *Responsive UI: Clean and accessible interface for a smooth user experience.
 
 # Setup and running the Application:
-1: Open the client directory in Terminal or iTerm and execute:
+1: Open the **client** directory in Terminal or iTerm and execute:
 ```npm run dev```
 
-2a: Open the server directory in a separate Terminal or iTerm session and execute:
+2a: Open the **server** directory in a separate Terminal or iTerm session and execute:
 ``` npm run dev ```
 2b: Create a new ``.env ``` file in the server directory:
 .env variable should be ``` OPENAI_API_KEY=<your open ai key here>
@@ -23,7 +23,7 @@ This project is a web-based application called Curious, designed to support lear
 3: Launch a web browser (e.g., Google Chrome) and navigate to:
 ``` http://localhost:5173 ```
 
-4: Getting your own API key for OpenAi to use in ``` .env ``` file
+4: Getting **your own API key for OpenAi** to use in ``` .env ``` file
 - Navigate to ```https://openai.com/api/``` and look at the top right portion of the page for the "Log In" dropdown button.
 - From the dropdown menu select API platform
 - This will navigate to a new url ```https://platform.openai.com/chat```
@@ -39,6 +39,7 @@ This project is a web-based application called Curious, designed to support lear
 - Bootstrap
 - OpenAI
 - CSS
+
 ***Backend***
 - Axios
 - Express
