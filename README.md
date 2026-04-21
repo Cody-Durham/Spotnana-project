@@ -30,8 +30,6 @@ This project is a web-based application called Curious, designed to support lear
 <br>- Along the left side of the page click on ```API keys```
 <br>- In the top right corner of the page near the header you should now see a butotn to ```Create new secrete key```. This will generate a new key to use in the .env file. 
 
-
-
 # Tech Stack
 ***Frontend***
 - React
