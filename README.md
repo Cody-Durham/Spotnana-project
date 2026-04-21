@@ -16,7 +16,7 @@ This project is a web-based application called Curious, designed to support lear
 
 2a: Open the **server** directory in a separate Terminal or iTerm session and execute:
 ``` npm run dev ```
-<br>2b: Create a new ``.env ``` file in the server directory:
+<br>2b: Create a new .env file in the server directory:
 .env variable should be ``` OPENAI_API_KEY=<your open ai key here>
 *** see number 4 instructions for getting your own api key ***
 
