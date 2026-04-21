@@ -1,11 +1,12 @@
 import React from "react";
 
 import robot_icon from "../../../Artwork/Assets/robot_icon.png";
+import Loader from "./Loader";
 
 import "../styles/AiChat.scss";
 
 const AiChat = ({
-    chatResponse, 
+    chatResponse,
     disableButton, 
     disableStyle,
     errorText,
@@ -13,7 +14,8 @@ const AiChat = ({
     handleClear,
     // handleClearPrompt,
     handleSubmit,
-    promptValue
+    promptValue,
+    showLoader
 }) => {
     return (
         <form 
@@ -73,6 +75,16 @@ const AiChat = ({
                 )}
             </div>
             <div className="ai-response-container">
+                {showLoader && (
+                    <div style={{
+                            minHeight: "100px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center"
+                        }}>
+                        <Loader />
+                    </div>
+                )}
                 {chatResponse?.length > 0 ? chatResponse : ""}
             </div>
         </form>

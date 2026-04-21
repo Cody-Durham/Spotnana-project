@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 
 import AiChat from "./components/AiChat";
 import Header from "./components/Header";
+import Loader from "./components/Loader";
 
 import saturn_pic from "../../Artwork/Assets/PIA21345.jpg";
 
@@ -12,6 +13,7 @@ function App() {
   const [disableButton, setDisableButton] = useState(true);
   const [promptValue, setPromptValue] = useState("");
   const [errorText, setErrorText] = useState("");
+  const [showLoader, setShowLoader] = useState(false);
   
   const disableStyle = promptValue !== "" ? "submit-button-style" : "submit-button-disable-style";
 
@@ -32,6 +34,7 @@ function App() {
     e.preventDefault();
 
     try {
+      setShowLoader(true);
       const res = await fetch("http://localhost:8080/api/chat", {
         method: "POST",
         headers: {
@@ -42,6 +45,7 @@ function App() {
       });
       const data = await res.json();
       setChatResponse(data.output);
+      setShowLoader(false);
 
     } catch (err) {
       console.log("error", err)
@@ -120,6 +124,7 @@ useEffect(() => {
           // handleClearPrompt={handleClearPrompt}
           handleSubmit={handleSubmit}
           promptValue={promptValue}
+          showLoader={showLoader}
         />
     </div>
   );
