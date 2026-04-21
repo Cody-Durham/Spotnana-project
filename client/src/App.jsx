@@ -12,10 +12,6 @@ function App() {
   const [disableButton, setDisableButton] = useState(true);
   const [promptValue, setPromptValue] = useState("");
   const [errorText, setErrorText] = useState("");
-
-
-  console.log("promptValue", promptValue);
-  
   
   const disableStyle = promptValue !== "" ? "submit-button-style" : "submit-button-disable-style";
 
@@ -57,7 +53,6 @@ function App() {
    * Reset fields (clear fields)
    */
   const handleClear = () => {
-    console.log("hitting??????");
     setChatResponse(null);
     setPromptValue("");  
     setErrorText("");
@@ -70,7 +65,6 @@ function App() {
 
   useEffect(() => {
     if (promptValue && promptValue.length === 150) {
-      // setErrorText("It looks like your question might be too long, try a shorter version.");
       setErrorText("Opps, too long. Try a shorter question");
       // I should put up a dialg here or a little error message below the input
     }

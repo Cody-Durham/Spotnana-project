@@ -67,7 +67,6 @@ app.use(express.json());
 app.post("/api/chat", async (req, res) => {
   try {
     const {input} = req.body;
-    // const combmine = "Only answer questions if they are related to space, otherwise say `Sorr, I really only want to talk about space!`"
 
     if (!input) {
       // I should add a dialog or alert here? 
@@ -75,7 +74,6 @@ app.post("/api/chat", async (req, res) => {
     }
     const response = await openai.responses.create({
       model: "gpt-4o-mini",
-      // input: combmine, 
       input, 
       max_output_tokens: 80
     });
