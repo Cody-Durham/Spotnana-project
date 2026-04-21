@@ -66,7 +66,6 @@ function App() {
   useEffect(() => {
     if (promptValue && promptValue.length === 150) {
       setErrorText("Opps, too long. Try a shorter question");
-      // I should put up a dialg here or a little error message below the input
     }
   }, [promptValue]);
 
