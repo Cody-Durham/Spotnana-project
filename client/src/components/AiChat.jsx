@@ -1,5 +1,6 @@
 import React from "react";
 
+import { X } from "react-bootstrap-icons";
 import robot_icon from "../../../Artwork/Assets/robot_icon.png";
 import Loader from "./Loader";
 
@@ -12,18 +13,11 @@ const AiChat = ({
     errorText,
     handleChange,
     handleClear,
+    handleClearPrompt,
     handleSubmit,
     promptValue,
     showLoader,
-
-
-    handleClearPrompt,
 }) => {
-    console.log("showLoader", showLoader);
-    
-    // console.log("promptValue", promptValue);
-    
-    
     return (
         <form 
             className="chat-main-container"
@@ -39,32 +33,6 @@ const AiChat = ({
                     {errorText && (
                         <div className="length-error">{errorText}</div>
                     )}
-
-
-
-
-
-                    {promptValue && (
-                        <div className="x-container">
-                        <button 
-                                className="x"
-                                // onClick={handleClear}
-                                // onClick={handleClearPrompt}
-                                type="button"
-                            >
-                                x
-                            </button>
-                        </div>
-                    )}
-
-
-
-
-
-
-
-
-
                     <label htmlFor="submit-button">Ask anything in the whole universe!</label>
                     <input 
                         className="prompt"
@@ -75,6 +43,18 @@ const AiChat = ({
                         type="text"
                         value={promptValue}
                     />
+                </div>
+                <div className="input-wrapper">
+                    {promptValue && !chatResponse && (
+                        <button
+                            className="x"
+                            onClick={handleClearPrompt}
+                            type="button"
+                            aria-label="Clear input"
+                        >
+                            <X />
+                        </button>
+                    )}
                 </div>
                 {!chatResponse && (
                     <button
