@@ -1,7 +1,7 @@
 # Spotnana-project
 This project is a web-based application called Curious, designed to support learning and question-based exploration. The application provides curated links at the top of the interface, allowing users to navigate to external resources that promote educational discovery. Additionally, users can enter questions into the input field at the bottom of the interface and submit them to receive responses powered by OpenAI.
 
-# Image
+# Home Page
 <img width="1813" height="1328" alt="image" src="https://github.com/user-attachments/assets/d7413a9a-2e4d-4977-8ebe-c4d9f36de1e8" />
 
 # Features
