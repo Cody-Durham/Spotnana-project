@@ -48,7 +48,6 @@ This project is a web-based application called Curious, designed to support lear
 
 # Architecture Overview
 The application follows a client-server architecture:
-
-*The client (React) handles the user interface and user interactions.
-*The server (Node.js/Express) processes requests and communicates with the OpenAI API.
-*User input is sent from the client to the server, which then returns a generated response to be displayed in the UI.
+<br>- The client (React) handles the user interface and user interactions.
+<br>- The server (Node.js/Express) processes requests and communicates with the OpenAI API.
+<br>- User input is sent from the client to the server, which then returns a generated response to be displayed in the UI.
