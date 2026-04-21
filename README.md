@@ -27,8 +27,8 @@ This project is a web-based application called Curious, designed to support lear
 <br>- Navigate to ```https://openai.com/api/``` and look at the top right portion of the page for the "Log In" dropdown button.
 <br>- From the dropdown menu select API platform
 <br>- This will navigate to a new url ```https://platform.openai.com/chat```
-<br>- Along the left side of the page click on ```API keys```
-<br>- In the top right corner of the page near the header you should now see a butotn to ```Create new secrete key```. This will generate a new key to use in the .env file. 
+<br>- Inside the left side bar of the page click on ```API keys```
+<br>- In the new page, the top right corner of the page, near the header you should see a button to ```Create new secrete key```. This will generate a new key to use in the .env file form step 3. 
 
 # Tech Stack
 ***Frontend***
