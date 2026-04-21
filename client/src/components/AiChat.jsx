@@ -15,9 +15,6 @@ const AiChat = ({
     handleSubmit,
     promptValue
 }) => {
-
-    console.log("errorText", errorText);
-    
     return (
         <form 
             className="chat-main-container"
