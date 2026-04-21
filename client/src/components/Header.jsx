@@ -9,7 +9,6 @@ import "../styles/Header.scss";
 const Header = () => {
     return (
         <div className="main-header-container">
-            
             <div className="upper-container">
                 <div className="left"><img className="planet-logo" src={planet_icon} alt="" /></div>
                 <div className="right">Curious</div>
