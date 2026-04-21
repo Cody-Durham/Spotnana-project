@@ -8,7 +8,7 @@ import "../styles/Button.scss";
 
 const Buttons = ({ buttonText, mainLink, items = [] }) => {
   return (
-    <Dropdown className="nasa-dropdown" as={ButtonGroup}>
+    <Dropdown className="nasa-dropdown" as={ButtonGroup} size="sm">
       <Button href={mainLink} target="_blank">
         {buttonText}
       </Button>
@@ -21,7 +21,6 @@ const Buttons = ({ buttonText, mainLink, items = [] }) => {
             key={index}
             href={item.link}
             drop="down-centered"
-            size="sm"
             target="_blank"
           >
             {item.name}
