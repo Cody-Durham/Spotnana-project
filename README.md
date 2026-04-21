@@ -5,7 +5,7 @@ This project is a web-based application called Curious, designed to support lear
 <img width="1813" height="1328" alt="image" src="https://github.com/user-attachments/assets/d7413a9a-2e4d-4977-8ebe-c4d9f36de1e8" />
 
 # Features
-<br>Interactive Q&A: Users can submit questions and receive AI-generated responses.
+<br>- Interactive Q&A: Users can submit questions and receive AI-generated responses.
 <br>Curated Learning Links: Quick access to external resources that promote learning.
 <br>Real-Time Feedback: Displays loading states and handles input validation.
 <br>Responsive UI: Clean and accessible interface for a smooth user experience.
