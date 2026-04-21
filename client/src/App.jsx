@@ -11,6 +11,11 @@ function App() {
   const [chatResponse, setChatResponse] = useState(null);
   const [disableButton, setDisableButton] = useState(true);
   const [promptValue, setPromptValue] = useState("");
+  const [errorText, setErrorText] = useState("");
+
+
+  console.log("promptValue", promptValue);
+  
   
   const disableStyle = promptValue !== "" ? "submit-button-style" : "submit-button-disable-style";
 
@@ -52,9 +57,24 @@ function App() {
    * Reset fields (clear fields)
    */
   const handleClear = () => {
+    console.log("hitting??????");
     setChatResponse(null);
     setPromptValue("");  
+    setErrorText("");
   };
+  // const handleClearPrompt = () => {
+  //   setPromptValue("");
+  //   // setErrorText("");
+  //   console.log("hitting PropmptClear?");
+  // }
+
+  useEffect(() => {
+    if (promptValue && promptValue.length === 150) {
+      // setErrorText("It looks like your question might be too long, try a shorter version.");
+      setErrorText("Opps, too long. Try a shorter question");
+      // I should put up a dialg here or a little error message below the input
+    }
+  }, [promptValue]);
 
   /**
    * NASA API, might still use
@@ -75,13 +95,15 @@ function App() {
 // }, []);
 
 /**
- * Disable button
+ * Disable button cd 
  */
 useEffect(() => {
   if (promptValue !== "") {
     setDisableButton(false);
   } else {
     setDisableButton(true);
+    setErrorText("")
+    setChatResponse(null);
   }
 }, [chatResponse, promptValue]);
 
@@ -90,7 +112,7 @@ useEffect(() => {
       <Header />
       <div className="pic-container">
         <img 
-        className="testing"
+        className="img"
         src={saturn_pic} 
         alt="Picture of saturn in space"
         />
@@ -99,8 +121,10 @@ useEffect(() => {
           chatResponse={chatResponse}
           disableButton={disableButton}
           disableStyle={disableStyle}
+          errorText={errorText}
           handleChange={handleChange}
           handleClear={handleClear}
+          // handleClearPrompt={handleClearPrompt}
           handleSubmit={handleSubmit}
           promptValue={promptValue}
         />

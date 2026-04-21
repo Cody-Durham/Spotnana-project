@@ -8,11 +8,16 @@ const AiChat = ({
     chatResponse, 
     disableButton, 
     disableStyle,
+    errorText,
     handleChange,
     handleClear,
+    // handleClearPrompt,
     handleSubmit,
     promptValue
 }) => {
+
+    console.log("errorText", errorText);
+    
     return (
         <form 
             className="chat-main-container"
@@ -25,9 +30,25 @@ const AiChat = ({
                     src={robot_icon}
                 />
                 <div className="prompt-text-area">
-                    <label htmlFor="">What would you like to learn about our solar system?</label>
+                    {errorText && (
+                        <div className="length-error">{errorText}</div>
+                    )}
+                    {/* {promptValue && (
+                        <div className="x-container">
+                        <button 
+                                className="x"
+                                // onClick={handleClear}
+                                // onClick={handleClearPrompt}
+                                type="button"
+                            >
+                                x
+                            </button>
+                        </div>
+                    )} */}
+                    <label htmlFor="submit-button">Ask anything in the whole universe!</label>
                     <input 
                         className="prompt"
+                        maxLength="150"
                         name="submit-button"
                         onChange={handleChange}
                         placeholder="Type your question here!"
@@ -50,7 +71,7 @@ const AiChat = ({
                         className={disableStyle}
                         onClick={handleClear}
                     >
-                        Clear
+                        Clear All
                     </button>
                 )}
             </div>
