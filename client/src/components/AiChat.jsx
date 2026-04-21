@@ -1,19 +1,22 @@
 import React from "react";
 
+import { X } from "react-bootstrap-icons";
 import robot_icon from "../../../Artwork/Assets/robot_icon.png";
+import Loader from "./Loader";
 
 import "../styles/AiChat.scss";
 
 const AiChat = ({
-    chatResponse, 
+    chatResponse,
     disableButton, 
     disableStyle,
     errorText,
     handleChange,
     handleClear,
-    // handleClearPrompt,
+    handleClearPrompt,
     handleSubmit,
-    promptValue
+    promptValue,
+    showLoader,
 }) => {
     return (
         <form 
@@ -30,18 +33,6 @@ const AiChat = ({
                     {errorText && (
                         <div className="length-error">{errorText}</div>
                     )}
-                    {/* {promptValue && (
-                        <div className="x-container">
-                        <button 
-                                className="x"
-                                // onClick={handleClear}
-                                // onClick={handleClearPrompt}
-                                type="button"
-                            >
-                                x
-                            </button>
-                        </div>
-                    )} */}
                     <label htmlFor="submit-button">Ask anything in the whole universe!</label>
                     <input 
                         className="prompt"
@@ -52,6 +43,18 @@ const AiChat = ({
                         type="text"
                         value={promptValue}
                     />
+                </div>
+                <div className="input-wrapper">
+                    {promptValue && !chatResponse && (
+                        <button
+                            className="x"
+                            onClick={handleClearPrompt}
+                            type="button"
+                            aria-label="Clear input"
+                        >
+                            <X />
+                        </button>
+                    )}
                 </div>
                 {!chatResponse && (
                     <button
@@ -73,6 +76,16 @@ const AiChat = ({
                 )}
             </div>
             <div className="ai-response-container">
+                {showLoader && (
+                    <div style={{
+                            minHeight: "100px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center"
+                        }}>
+                        <Loader />
+                    </div>
+                )}
                 {chatResponse?.length > 0 ? chatResponse : ""}
             </div>
         </form>

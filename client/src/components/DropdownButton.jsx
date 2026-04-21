@@ -6,7 +6,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 import "../styles/Button.scss";
 
-const Buttons = ({ buttonText, mainLink, items = [] }) => {
+const DropdownButton = ({ buttonText, mainLink, items = [] }) => {
   return (
     <Dropdown className="nasa-dropdown" as={ButtonGroup} size="sm">
       <Button href={mainLink} target="_blank">
@@ -31,4 +31,4 @@ const Buttons = ({ buttonText, mainLink, items = [] }) => {
   );
 };
 
-export default Buttons;
+export default DropdownButton;

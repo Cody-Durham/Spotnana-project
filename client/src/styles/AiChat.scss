@@ -14,6 +14,7 @@
         .prompt-bot-icon {
             height: 110px;
         }
+
         .prompt-text-area {
             display: flex;
             flex-direction: column;
@@ -21,44 +22,16 @@
             margin: 0 20px;
 
             .length-error {
-                color: rgb(159, 61, 61);
+                color: rgb(217, 43, 43);
                 font-family: 'Inter', sans-serif;
                 -webkit-font-smoothing: antialiased;
                 display: flex;
                 justify-content: flex-end;
                 position: relative;
                 position: absolute;
-                top: 1099px;
+                top: 1089px;
                 margin-left: 30px;
             }
-
-            // .x-container {
-            //     display: flex;
-            //     justify-content: flex-end;
-            //     position: relative;
-            //     top: 70px;
-            //     left: 10px;
-
-            //     .x {
-            //         background:  rgb(184, 179, 217);
-            //         border: none;
-            //         display: flex;
-            //         justify-content: center;
-            //         align-items: center;
-            //         width: 30px;
-            //         height: 30px;
-            //         border-radius: 20px;
-            //         font-size: 1.4rem;
-            //         padding-bottom: 5px;
-            //         cursor: pointer;
-            //         transition: 0.2s ease;
-            //         &:hover {
-            //             // background: rgb(63, 58, 131);
-            //             background: rgb(231, 227, 255);
-            //             transition: 0.2s ease;
-            //         }
-            //     }
-            // }
 
             label {
                 font-family: 'Inter', sans-serif;
@@ -81,7 +54,6 @@
                 font-size: 1.2rem;
                 font-weight: 300;
                 padding: 5px 30px;
-                // width: 90%;
             }
             .prompt::placeholder {
                 color: rgb(184, 179, 217);
@@ -148,5 +120,36 @@
         font-weight: 300;
         margin-right: 20px;
         line-height: 1.4;
+    }
+    .hidden {
+        display: none;
+    }
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+    .x {
+        background:  rgb(184, 179, 217);
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        font-size: 1.4rem;
+        padding-bottom: 5px;
+        cursor: pointer;
+        transition: 0.2s ease;
+        position: absolute;
+        right: 10px;
+        bottom: 25px;
+        &:hover {
+            background: rgb(231, 227, 255);
+            transition: 0.2s ease;
+        }
     }
 }

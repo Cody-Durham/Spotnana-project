@@ -1,6 +1,6 @@
 import React from "react";
 
-import Buttons from "./Buttons";
+import DropdownButton from "./DropdownButton";
 import planet_icon from "../../../Artwork/Assets/planet_icon.png";
 
 import "../styles/Button.scss";
@@ -15,7 +15,7 @@ const Header = () => {
                 <div className="tagline">Question Everything.</div>
             </div>
             <div className="lower-container">
-                <Buttons 
+                <DropdownButton 
                       buttonText="Google Earth"
                       mainLink="https://www.google.com/intl/en_us/earth/education/"
                         items={[
@@ -25,7 +25,7 @@ const Header = () => {
                     ]}
                 />
                 <div style={{color: "rgb(128, 124, 151)"}}>&nbsp;|</div>
-                <Buttons 
+                <DropdownButton 
                     buttonText="NASA"
                     mainLink="https://www.nasa.gov"
                     items={[
@@ -37,7 +37,7 @@ const Header = () => {
                     ]}
                 />
                 <div style={{color: "rgb(128, 124, 151)"}}>&nbsp;|</div>
-                <Buttons
+                <DropdownButton
                     buttonText="Dinosaurs"
                     mainLink="https://kids.nationalgeographic.com/animals/prehistoric"
                     items={[
