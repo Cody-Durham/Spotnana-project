@@ -12,11 +12,18 @@ const AiChat = ({
     errorText,
     handleChange,
     handleClear,
-    // handleClearPrompt,
     handleSubmit,
     promptValue,
-    showLoader
+    showLoader,
+
+
+    handleClearPrompt,
 }) => {
+    console.log("showLoader", showLoader);
+    
+    // console.log("promptValue", promptValue);
+    
+    
     return (
         <form 
             className="chat-main-container"
@@ -32,7 +39,12 @@ const AiChat = ({
                     {errorText && (
                         <div className="length-error">{errorText}</div>
                     )}
-                    {/* {promptValue && (
+
+
+
+
+
+                    {promptValue && (
                         <div className="x-container">
                         <button 
                                 className="x"
@@ -43,7 +55,16 @@ const AiChat = ({
                                 x
                             </button>
                         </div>
-                    )} */}
+                    )}
+
+
+
+
+
+
+
+
+
                     <label htmlFor="submit-button">Ask anything in the whole universe!</label>
                     <input 
                         className="prompt"

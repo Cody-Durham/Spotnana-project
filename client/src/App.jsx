@@ -34,7 +34,7 @@ function App() {
     e.preventDefault();
 
     try {
-      setShowLoader(true);
+      setShowLoader(true)
       const res = await fetch("http://localhost:8080/api/chat", {
         method: "POST",
         headers: {
@@ -97,6 +97,9 @@ function App() {
 useEffect(() => {
   if (promptValue !== "") {
     setDisableButton(false);
+    // if (!chatResponse && showLoader === false) {
+    //   setShowLoader(true);
+    // } 
   } else {
     setDisableButton(true);
     setErrorText("")
