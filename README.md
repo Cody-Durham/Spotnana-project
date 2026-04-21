@@ -6,9 +6,9 @@ This project is a web-based application called Curious, designed to support lear
 
 # Features
 <br>- Interactive Q&A: Users can submit questions and receive AI-generated responses.
-<br>Curated Learning Links: Quick access to external resources that promote learning.
-<br>Real-Time Feedback: Displays loading states and handles input validation.
-<br>Responsive UI: Clean and accessible interface for a smooth user experience.
+<br>- Curated Learning Links: Quick access to external resources that promote learning.
+<br>- Real-Time Feedback: Displays loading states and handles input validation.
+<br>- Responsive UI: Clean and accessible interface for a smooth user experience.
 
 # Setup and running the Application:
 1: Open the **client** directory in Terminal or iTerm and execute:
